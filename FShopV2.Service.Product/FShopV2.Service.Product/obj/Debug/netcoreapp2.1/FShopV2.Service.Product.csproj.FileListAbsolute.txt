@@ -1,0 +1,17 @@
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\obj\Debug\netcoreapp2.1\FShopV2.Service.Product.csprojAssemblyReference.cache
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\obj\Debug\netcoreapp2.1\FShopV2.Service.Product.csproj.CoreCompileInputs.cache
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\obj\Debug\netcoreapp2.1\FShopV2.Service.Product.RazorAssemblyInfo.cache
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\obj\Debug\netcoreapp2.1\FShopV2.Service.Product.RazorAssemblyInfo.cs
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\obj\Debug\netcoreapp2.1\FShopV2.Service.Product.AssemblyInfoInputs.cache
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\obj\Debug\netcoreapp2.1\FShopV2.Service.Product.AssemblyInfo.cs
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\bin\Debug\netcoreapp2.1\FShopV2.Service.Product.deps.json
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\bin\Debug\netcoreapp2.1\FShopV2.Service.Product.runtimeconfig.json
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\bin\Debug\netcoreapp2.1\FShopV2.Service.Product.runtimeconfig.dev.json
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\bin\Debug\netcoreapp2.1\FShopV2.Service.Product.dll
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\bin\Debug\netcoreapp2.1\FShopV2.Service.Product.pdb
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\bin\Debug\netcoreapp2.1\FShopV2.Base.dll
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\bin\Debug\netcoreapp2.1\FShopV2.Base.pdb
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\obj\Debug\netcoreapp2.1\FShopV2.Service.Product.RazorTargetAssemblyInfo.cache
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\obj\Debug\netcoreapp2.1\FShopV2.Service.Product.csproj.CopyComplete
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\obj\Debug\netcoreapp2.1\FShopV2.Service.Product.dll
+D:\C-SHARP\FShopV2\FShopV2.Service.Product\FShopV2.Service.Product\obj\Debug\netcoreapp2.1\FShopV2.Service.Product.pdb
