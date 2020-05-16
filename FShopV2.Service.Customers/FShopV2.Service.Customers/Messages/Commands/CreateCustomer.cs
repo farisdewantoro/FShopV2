@@ -7,17 +7,19 @@ using System.Threading.Tasks;
 
 namespace FShopV2.Service.Customers.Messages.Commands
 {
-    public class CreateUser:ICommand
+    public class CreateCustomer:ICommand
     {
         public Guid Id { get; set; }
-        public string Email { get;  set; }
-        public string Phone { get;  set; }
-        public string Address { get;  set; }
+        public string FullName { get; set; }
+        public string Email { get; private set; }
+        public string Phone { get; private set; }
+        public string Address { get; private set; }
 
         [JsonConstructor]
-        public CreateUser(Guid id,string email, string phone, string address)
+        public CreateCustomer(Guid id,string fullName,string email, string phone, string address)
         {
             Id = id;
+            FullName = fullName;
             Email = email;
             Phone = phone;
             Address = address;

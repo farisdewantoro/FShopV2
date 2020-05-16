@@ -9,20 +9,19 @@ namespace FShopV2.Service.Customers.Entities
 {
     public class Customer :BaseEntity
     {
+        public string FullName { get; set; }
         public string Email { get; private set; }
         public string Phone { get; private set; }
         public string Address { get; private set; }
-
-        public Customer(string email, string phone, string address)
+        
+        public Customer(Guid id,string fullName,string email, string phone, string address)
         {
+            Id = id;
+            FullName = fullName;
             Email = email;
             Phone = phone;
             Address = address;
         }
-        public Customer(CreateUser userCommand)
-            :this(userCommand.Email,userCommand.Phone,userCommand.Address)
-        {
-
-        }
+     
     }
 }

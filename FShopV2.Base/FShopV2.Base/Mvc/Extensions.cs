@@ -1,13 +1,17 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Serialization;
+//using Lockbox.Client.Extensions;
+using Microsoft.AspNetCore.Hosting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using System.Text;
+using System.Linq;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace FShopV2.Base.Mvc
 {
@@ -21,16 +25,16 @@ namespace FShopV2.Base.Mvc
                 services.Configure<AppOptions>(configuration.GetSection("app"));
             }
 
-            //services.AddSingleton<IServiceId, ServiceId>();
-            //services.AddTransient<IStartupInitializer, StartupInitializer>();
-            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IServiceId, ServiceId>();
+            services.AddTransient<IStartupInitializer, StartupInitializer>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             return services
                 .AddMvcCore()
                 .AddJsonFormatters()
                 .AddDataAnnotations()
                 .AddApiExplorer()
-                //.AddDefaultJsonOptions()
+                .AddDefaultJsonOptions()
                 .AddAuthorization();
         }
 
@@ -49,20 +53,20 @@ namespace FShopV2.Base.Mvc
                     return startupInitializer;
                 });
 
-        //public static IMvcCoreBuilder AddDefaultJsonOptions(this IMvcCoreBuilder builder)
-        //    => builder.AddJsonOptions(o =>
-        //    {
-        //        o.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-        //        o.SerializerSettings.DateFormatHandling = DateFormatHandling.IsoDateFormat;
-        //        o.SerializerSettings.DateParseHandling = DateParseHandling.DateTimeOffset;
-        //        o.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.None;
-        //        o.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-        //        o.SerializerSettings.Formatting = Formatting.Indented;
-        //        o.SerializerSettings.Converters.Add(new StringEnumConverter());
-        //    });
+        public static IMvcCoreBuilder AddDefaultJsonOptions(this IMvcCoreBuilder builder)
+            => builder.AddJsonOptions(o =>
+            {
+                o.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+                o.SerializerSettings.DateFormatHandling = DateFormatHandling.IsoDateFormat;
+                o.SerializerSettings.DateParseHandling = DateParseHandling.DateTimeOffset;
+                o.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.None;
+                o.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                o.SerializerSettings.Formatting = Formatting.Indented;
+                o.SerializerSettings.Converters.Add(new StringEnumConverter());
+            });
 
-        //public static IApplicationBuilder UseErrorHandler(this IApplicationBuilder builder)
-        //    => builder.UseMiddleware<ErrorHandlerMiddleware>();
+        public static IApplicationBuilder UseErrorHandler(this IApplicationBuilder builder)
+            => builder.UseMiddleware<ErrorHandlerMiddleware>();
 
         public static IApplicationBuilder UseAllForwardedHeaders(this IApplicationBuilder builder)
             => builder.UseForwardedHeaders(new ForwardedHeadersOptions
@@ -70,15 +74,15 @@ namespace FShopV2.Base.Mvc
                 ForwardedHeaders = ForwardedHeaders.All
             });
 
-        //public static IApplicationBuilder UseServiceId(this IApplicationBuilder builder)
-        //    => builder.Map("/id", c => c.Run(async ctx =>
-        //    {
-        //        using (var scope = c.ApplicationServices.CreateScope())
-        //        {
-        //            var id = scope.ServiceProvider.GetService<IServiceId>().Id;
-        //            await ctx.Response.WriteAsync(id);
-        //        }
-        //    }));
+        public static IApplicationBuilder UseServiceId(this IApplicationBuilder builder)
+            => builder.Map("/id", c => c.Run(async ctx =>
+            {
+                using (var scope = c.ApplicationServices.CreateScope())
+                {
+                    var id = scope.ServiceProvider.GetService<IServiceId>().Id;
+                    await ctx.Response.WriteAsync(id);
+                }
+            }));
 
         //public static IWebHostBuilder UseLockbox(this IWebHostBuilder builder)
         //    => builder.ConfigureAppConfiguration((ctx, cfg) =>

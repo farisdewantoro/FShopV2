@@ -1,0 +1,17 @@
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\bin\Debug\netcoreapp2.1\FShopV2.Service.Api.deps.json
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\bin\Debug\netcoreapp2.1\FShopV2.Service.Api.runtimeconfig.json
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\bin\Debug\netcoreapp2.1\FShopV2.Service.Api.runtimeconfig.dev.json
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\bin\Debug\netcoreapp2.1\FShopV2.Service.Api.dll
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\bin\Debug\netcoreapp2.1\FShopV2.Base.dll
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\bin\Debug\netcoreapp2.1\FShopV2.Base.pdb
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\obj\Debug\netcoreapp2.1\FShopV2.Service.Api.csprojAssemblyReference.cache
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\obj\Debug\netcoreapp2.1\FShopV2.Service.Api.csproj.CoreCompileInputs.cache
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\obj\Debug\netcoreapp2.1\FShopV2.Service.Api.RazorAssemblyInfo.cache
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\obj\Debug\netcoreapp2.1\FShopV2.Service.Api.RazorAssemblyInfo.cs
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\obj\Debug\netcoreapp2.1\FShopV2.Service.Api.AssemblyInfoInputs.cache
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\obj\Debug\netcoreapp2.1\FShopV2.Service.Api.AssemblyInfo.cs
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\obj\Debug\netcoreapp2.1\FShopV2.Service.Api.RazorTargetAssemblyInfo.cache
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\obj\Debug\netcoreapp2.1\FShopV2.Service.Api.csproj.CopyComplete
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\bin\Debug\netcoreapp2.1\FShopV2.Service.Api.pdb
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\obj\Debug\netcoreapp2.1\FShopV2.Service.Api.dll
+D:\LATIHAN\FShopV2\FShopV2.Service.Api\FShopV2.Service.Api\obj\Debug\netcoreapp2.1\FShopV2.Service.Api.pdb

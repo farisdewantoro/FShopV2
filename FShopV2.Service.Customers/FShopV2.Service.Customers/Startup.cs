@@ -17,6 +17,12 @@ using Autofac.Extensions.DependencyInjection;
 using FShopV2.Base.Dispatchers;
 using FShopV2.Base.RabbitMQ;
 using FShopV2.Service.Customers.Entities;
+using FShopV2.Service.Customers.Messages.Events;
+using FShopV2.Base.Jaeger;
+using FShopV2.Service.Customers.Messages.Commands;
+using FShopV2.Service.Customers.Services;
+using FShopV2.Base.RestEase;
+using FShopV2.Base.Utility;
 
 namespace FShopV2.Service.Customers
 {
@@ -36,6 +42,9 @@ namespace FShopV2.Service.Customers
         {
             services.AddCustomMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddInitializers(typeof(IMongoDbInitializer));
+            services.AddJaeger();
+            services.AddOpenTracing();
+            services.RegisterServiceForwarder<IOrderService>(CodeConstant.ServicesName.ORDER_SERVICE);
             var builder = new ContainerBuilder();
             builder.RegisterAssemblyTypes(typeof(Startup).Assembly)
               .AsImplementedInterfaces();
@@ -43,13 +52,13 @@ namespace FShopV2.Service.Customers
             builder.AddDispatchers();
             builder.AddMongoDb();
             builder.AddRabbitMq();
-            builder.AddMongoRepository<Customer>("Users");
+            builder.AddMongoRepository<Customer>("Customers");
             Container = builder.Build();
             return new AutofacServiceProvider(Container);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IStartupInitializer initializer)
         {
             if (env.IsDevelopment())
             {
@@ -60,6 +69,10 @@ namespace FShopV2.Service.Customers
                 app.UseHsts();
             }
 
+            initializer.InitializeAsync();
+            app.UseRabbitMq()
+                .SubscribeCommand<CreateCustomer>(onError: (c, e) =>
+                     new CreateCustomerRejected(c.Id, e.Message, e.Code));
             app.UseHttpsRedirection();
             app.UseMvc();
         }

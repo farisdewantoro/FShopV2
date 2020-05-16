@@ -2836,6 +2836,22 @@
           "lib/netstandard2.0/OpenTracing.dll": {}
         }
       },
+      "OpenTracing.Contrib.NetCore/0.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Hosting.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0",
+          "OpenTracing": "0.12.0"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/OpenTracing.Contrib.NetCore.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/OpenTracing.Contrib.NetCore.dll": {}
+        }
+      },
       "Polly/7.1.0": {
         "type": "package",
         "compile": {
@@ -3028,6 +3044,19 @@
         },
         "runtime": {
           "lib/netstandard1.0/Remotion.Linq.dll": {}
+        }
+      },
+      "RestEase/1.4.9": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.1",
+          "System.Reflection.Emit": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/RestEase.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RestEase.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
@@ -5086,13 +5115,28 @@
           "RawRabbit.Enrichers.Polly": "2.0.0-rc5",
           "RawRabbit.Enrichers.RetryLater": "2.0.0-rc5",
           "RawRabbit.Operations.Publish": "2.0.0-rc5",
-          "RawRabbit.Operations.Subscribe": "2.0.0-rc5"
+          "RawRabbit.Operations.Subscribe": "2.0.0-rc5",
+          "RestEase": "1.4.9"
         },
         "compile": {
           "bin/placeholder/FShopV2.Base.dll": {}
         },
         "runtime": {
           "bin/placeholder/FShopV2.Base.dll": {}
+        }
+      },
+      "FShopV2.Service.Api/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "FShopV2.Base": "1.0.0",
+          "OpenTracing.Contrib.NetCore": "0.5.0"
+        },
+        "compile": {
+          "bin/placeholder/FShopV2.Service.Api.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FShopV2.Service.Api.dll": {}
         }
       }
     }
@@ -8136,6 +8180,20 @@
         "opentracing.nuspec"
       ]
     },
+    "OpenTracing.Contrib.NetCore/0.5.0": {
+      "sha512": "rwOr4Yd0+Vci+vOI/B4bygM0ELj+Id2Xyso3FTlcyBxDcLrCR43ZpH5dxfCAVc/JXoyLt8vfo4xGjJl1S5hq4Q==",
+      "type": "package",
+      "path": "opentracing.contrib.netcore/0.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp2.0/OpenTracing.Contrib.NetCore.dll",
+        "lib/netcoreapp2.0/OpenTracing.Contrib.NetCore.pdb",
+        "lib/netcoreapp2.0/OpenTracing.Contrib.NetCore.xml",
+        "opentracing.contrib.netcore.0.5.0.nupkg.sha512",
+        "opentracing.contrib.netcore.nuspec"
+      ]
+    },
     "Polly/7.1.0": {
       "sha512": "mpQsvlEn4ipgICh5CGyVLPV93RFVzOrBG7wPZfzY8gExh7XgWQn0GCDY9nudbUEJ12UiGPP9i4+CohghBvzhmg==",
       "type": "package",
@@ -8315,6 +8373,23 @@
         "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.xml",
         "remotion.linq.2.2.0.nupkg.sha512",
         "remotion.linq.nuspec"
+      ]
+    },
+    "RestEase/1.4.9": {
+      "sha512": "ZnVJOg6oQoJHPKSBxFXq826jyRIcp0qPp4bKbAKcZrcBB7tOVkBZdp4UuisZVTej+Vw+r9j89m6EJNgjYvRCYw==",
+      "type": "package",
+      "path": "restease/1.4.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/RestEase.dll",
+        "lib/net45/RestEase.xml",
+        "lib/netstandard1.1/RestEase.dll",
+        "lib/netstandard1.1/RestEase.xml",
+        "lib/netstandard2.0/RestEase.dll",
+        "lib/netstandard2.0/RestEase.xml",
+        "restease.1.4.9.nupkg.sha512",
+        "restease.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
@@ -13640,11 +13715,17 @@
       "type": "project",
       "path": "../../FShopV2.Base/FShopV2.Base/FShopV2.Base.csproj",
       "msbuildProject": "../../FShopV2.Base/FShopV2.Base/FShopV2.Base.csproj"
+    },
+    "FShopV2.Service.Api/1.0.0": {
+      "type": "project",
+      "path": "../../FShopV2.Service.Api/FShopV2.Service.Api/FShopV2.Service.Api.csproj",
+      "msbuildProject": "../../FShopV2.Service.Api/FShopV2.Service.Api/FShopV2.Service.Api.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "FShopV2.Base >= 1.0.0",
+      "FShopV2.Service.Api >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0"
@@ -13683,6 +13764,9 @@
           "projectReferences": {
             "D:\\LATIHAN\\FShopV2\\FShopV2.Base\\FShopV2.Base\\FShopV2.Base.csproj": {
               "projectPath": "D:\\LATIHAN\\FShopV2\\FShopV2.Base\\FShopV2.Base\\FShopV2.Base.csproj"
+            },
+            "D:\\LATIHAN\\FShopV2\\FShopV2.Service.Api\\FShopV2.Service.Api\\FShopV2.Service.Api.csproj": {
+              "projectPath": "D:\\LATIHAN\\FShopV2\\FShopV2.Service.Api\\FShopV2.Service.Api\\FShopV2.Service.Api.csproj"
             }
           }
         }

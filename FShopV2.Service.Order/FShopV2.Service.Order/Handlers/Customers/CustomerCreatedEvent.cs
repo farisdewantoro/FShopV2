@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FShopV2.Service.Order.Handlers.Order
+namespace FShopV2.Service.Customers.Handlers.Order
 {
     public class CustomerCreatedEvent:IEventHandler<CustomerCreated>
     {
@@ -20,6 +20,6 @@ namespace FShopV2.Service.Order.Handlers.Order
         }
 
         public async Task HandleAsync(CustomerCreated @event, ICorrelationContext context)
-            => await mongoRepository.AddAsync(new Customer(@event.Email, @event.Phone, @event.Address));
+            => await mongoRepository.AddAsync(new Customer(@event.Id,@event.FullName,@event.Email, @event.Phone, @event.Address));
     }
 }

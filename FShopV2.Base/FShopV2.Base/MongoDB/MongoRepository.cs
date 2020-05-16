@@ -2,10 +2,11 @@
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-
+using MongoDB.Driver.Linq;
 namespace FShopV2.Base.MongoDB
 {
     public class MongoRepository<TEntity> : IMongoRepository<TEntity> where TEntity : IIdentifiable
@@ -25,11 +26,11 @@ namespace FShopV2.Base.MongoDB
 
         public async Task<IEnumerable<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate)
             => await Collection.Find(predicate).ToListAsync();
-        
 
-        //public async Task<PagedResult<TEntity>> BrowseAsync<TQuery>(Expression<Func<TEntity, bool>> predicate,
-        //        TQuery query) where TQuery : PagedQueryBase
-        //    => await Collection.AsQueryable().Where(predicate).PaginateAsync(query);
+
+        public async Task<PagedResult<TEntity>> BrowseAsync<TQuery>(Expression<Func<TEntity, bool>> predicate,
+                TQuery query) where TQuery : PagedQueryBase
+            => await Collection.AsQueryable().Where(predicate).PaginateAsync(query);
 
         public async Task AddAsync(TEntity entity)
             => await Collection.InsertOneAsync(entity);

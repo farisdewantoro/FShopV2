@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\FShopV2.Base\FShopV2.Base\FShopV2.Base.csproj" />
+    <ProjectReference Include="..\..\FShopV2.Service.Api\FShopV2.Service.Api\FShopV2.Service.Api.csproj" />
   </ItemGroup>
 
 </Project>

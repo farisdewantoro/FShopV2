@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace FShopV2.Service.Customers.Handlers.Customers
 {
-    public class CreateCustomerCommand : ICommandHandler<CreateUser>
+    public class CreateCustomerCommand : ICommandHandler<CreateCustomer>
     {
         private readonly IMongoRepository<Customer> mongoRepository;
         private readonly IBusPublisher busPublisher;
@@ -22,11 +22,19 @@ namespace FShopV2.Service.Customers.Handlers.Customers
             this.busPublisher = busPublisher;
         }
 
-        public Task HandleAsync(CreateUser command, ICorrelationContext context)
+        public Task HandleAsync(CreateCustomer command, ICorrelationContext context)
         {
-            Customer user = new Customer(command);
+            Customer user = new Customer(command.Id,command.FullName,command.Email,command.Phone,command.Address);
+
             mongoRepository.AddAsync(user);
-            return busPublisher.PublishAsync(new CustomerCreated(command.Email, command.Phone, command.Address),context);
+            return busPublisher.PublishAsync(
+                new CustomerCreated(
+                    command.Id,
+                    command.FullName,
+                    command.Email, 
+                    command.Phone, 
+                    command.Address
+                    ),context);
         }
     }
 }

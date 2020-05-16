@@ -1,6 +1,9 @@
 ﻿using FShopV2.Base.Dispatchers;
 using FShopV2.Base.Mvc;
+using FShopV2.Base.Types;
+using FShopV2.Service.Customers.Dto;
 using FShopV2.Service.Customers.Messages.Commands;
+using FShopV2.Service.Customers.Queries;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,23 +12,24 @@ using System.Threading.Tasks;
 
 namespace FShopV2.Service.Customers.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CustomerController : ControllerBase
+
+    public class CustomerController : BaseController
     {
-        private readonly IDispatcher dispatcher;
 
-        public CustomerController(IDispatcher dispatcher)
+        public CustomerController(IDispatcher dispatcher):base(dispatcher)
         {
-            this.dispatcher = dispatcher;
+        }
+        [HttpGet("getall")]
+        public async Task<ActionResult<PagedResult<CustomerDto>>> GetAll()
+        {
+            BrowseCustomers query = new BrowseCustomers();
+            
+            return Collection(await QueryAsync(query));
         }
 
-        [HttpPost]
-        public async Task<ActionResult> Post(CreateUser createUser)
-        {
-            await dispatcher.SendAsync(createUser.BindId(c=>c.Id));
-            return Accepted();
-        }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<CustomerDto>> Get([FromRoute] GetCustomer query)
+            => Single(await QueryAsync(query));
 
     }
 }

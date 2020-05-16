@@ -21,18 +21,18 @@ namespace FShopV2.Service.Product.Test.Handlers.Categories
              _stubMongoRepository = new Mock<IMongoRepository<Category>>();
 
         }
-        [Fact]
-        public void HandleAsync_Insert_ShouldCreateNewCategory()
-        {
-            CreateCategory command = new CreateCategory();
-            command.Name = "Testing";
-            command.Description = "wadaw";
+        //[Fact]
+        //public void HandleAsync_Insert_ShouldCreateNewCategory()
+        //{
+        //    CreateCategory command = new CreateCategory();
+        //    command.Name = "Testing";
+        //    command.Description = "wadaw";
 
-            _stubMongoRepository.Setup(x => x.AddAsync(It.IsAny<Category>())).Verifiable();
-             var mockCreateCategoryCommand = new CreateCategoryCommand(_stubMongoRepository.Object);
-            mockCreateCategoryCommand.HandleAsync(command);
-            _stubMongoRepository.Verify();
-        }
+        //    _stubMongoRepository.Setup(x => x.AddAsync(It.IsAny<Category>())).Verifiable();
+        //     var mockCreateCategoryCommand = new CreateCategoryCommand(_stubMongoRepository.Object);
+        //    mockCreateCategoryCommand.HandleAsync(command);
+        //    _stubMongoRepository.Verify();
+        //}
       
 
     }

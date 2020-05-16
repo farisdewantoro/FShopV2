@@ -23,7 +23,6 @@ namespace FShopV2.Base.Types
         }
         public BaseEntity()
         {
-            Id = Guid.NewGuid();
             CreatedDate = DateTime.UtcNow;
             SetUpdatedDate();
         }
