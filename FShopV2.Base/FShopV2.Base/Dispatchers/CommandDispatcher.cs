@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using Autofac;
 using FShopV2.Base.Handlers;
 using FShopV2.Base.Messages;
+using FShopV2.Base.RabbitMQ;
 //using FShopV2.Base.RabbitMq;
 
 namespace FShopV2.Base.Dispatchers
@@ -16,6 +17,6 @@ namespace FShopV2.Base.Dispatchers
         }
 
         public async Task SendAsync<T>(T command) where T : ICommand
-            => await _context.Resolve<ICommandHandler<T>>().HandleAsync(command);
+            => await _context.Resolve<ICommandHandler<T>>().HandleAsync(command, CorrelationContext.Empty);
     }
 }

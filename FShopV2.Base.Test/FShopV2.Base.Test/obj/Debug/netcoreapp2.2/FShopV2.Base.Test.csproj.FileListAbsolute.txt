@@ -1,0 +1,10 @@
+D:\LATIHAN\FShopV2\FShopV2.Base.Test\FShopV2.Base.Test\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\LATIHAN\FShopV2\FShopV2.Base.Test\FShopV2.Base.Test\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+D:\LATIHAN\FShopV2\FShopV2.Base.Test\FShopV2.Base.Test\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+D:\LATIHAN\FShopV2\FShopV2.Base.Test\FShopV2.Base.Test\bin\Debug\netcoreapp2.2\FShopV2.Base.Test.deps.json
+D:\LATIHAN\FShopV2\FShopV2.Base.Test\FShopV2.Base.Test\bin\Debug\netcoreapp2.2\FShopV2.Base.Test.runtimeconfig.json
+D:\LATIHAN\FShopV2\FShopV2.Base.Test\FShopV2.Base.Test\bin\Debug\netcoreapp2.2\FShopV2.Base.Test.runtimeconfig.dev.json
+D:\LATIHAN\FShopV2\FShopV2.Base.Test\FShopV2.Base.Test\bin\Debug\netcoreapp2.2\FShopV2.Base.Test.dll
+D:\LATIHAN\FShopV2\FShopV2.Base.Test\FShopV2.Base.Test\obj\Debug\netcoreapp2.2\FShopV2.Base.Test.csproj.CoreCompileInputs.cache
+D:\LATIHAN\FShopV2\FShopV2.Base.Test\FShopV2.Base.Test\obj\Debug\netcoreapp2.2\FShopV2.Base.Test.AssemblyInfoInputs.cache
+D:\LATIHAN\FShopV2\FShopV2.Base.Test\FShopV2.Base.Test\obj\Debug\netcoreapp2.2\FShopV2.Base.Test.AssemblyInfo.cs

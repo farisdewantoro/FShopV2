@@ -8,7 +8,6 @@ namespace FShopV2.Base.Types
 {
     public abstract class BaseEntity : IIdentifiable
     {
-        [ValidGuid]
         [Required]
         public Guid Id { get; protected set; }
         [Required]

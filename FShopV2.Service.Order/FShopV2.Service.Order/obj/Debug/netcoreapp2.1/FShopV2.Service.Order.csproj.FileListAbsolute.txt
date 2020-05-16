@@ -1,0 +1,17 @@
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\bin\Debug\netcoreapp2.1\FShopV2.Service.Order.deps.json
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\bin\Debug\netcoreapp2.1\FShopV2.Service.Order.runtimeconfig.json
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\bin\Debug\netcoreapp2.1\FShopV2.Service.Order.runtimeconfig.dev.json
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\bin\Debug\netcoreapp2.1\FShopV2.Service.Order.dll
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\bin\Debug\netcoreapp2.1\FShopV2.Service.Order.pdb
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\bin\Debug\netcoreapp2.1\FShopV2.Base.dll
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\bin\Debug\netcoreapp2.1\FShopV2.Base.pdb
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\obj\Debug\netcoreapp2.1\FShopV2.Service.Order.csprojAssemblyReference.cache
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\obj\Debug\netcoreapp2.1\FShopV2.Service.Order.csproj.CoreCompileInputs.cache
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\obj\Debug\netcoreapp2.1\FShopV2.Service.Order.RazorAssemblyInfo.cache
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\obj\Debug\netcoreapp2.1\FShopV2.Service.Order.RazorAssemblyInfo.cs
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\obj\Debug\netcoreapp2.1\FShopV2.Service.Order.AssemblyInfoInputs.cache
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\obj\Debug\netcoreapp2.1\FShopV2.Service.Order.AssemblyInfo.cs
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\obj\Debug\netcoreapp2.1\FShopV2.Service.Order.RazorTargetAssemblyInfo.cache
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\obj\Debug\netcoreapp2.1\FShopV2.Service.Order.csproj.CopyComplete
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\obj\Debug\netcoreapp2.1\FShopV2.Service.Order.dll
+D:\LATIHAN\FShopV2\FShopV2.Service.Order\FShopV2.Service.Order\obj\Debug\netcoreapp2.1\FShopV2.Service.Order.pdb

@@ -1,0 +1,17 @@
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\obj\Debug\netcoreapp2.1\FShopV2.Service.Customers.csprojAssemblyReference.cache
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\obj\Debug\netcoreapp2.1\FShopV2.Service.Customers.csproj.CoreCompileInputs.cache
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\obj\Debug\netcoreapp2.1\FShopV2.Service.Customers.RazorAssemblyInfo.cache
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\obj\Debug\netcoreapp2.1\FShopV2.Service.Customers.RazorAssemblyInfo.cs
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\obj\Debug\netcoreapp2.1\FShopV2.Service.Customers.AssemblyInfoInputs.cache
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\obj\Debug\netcoreapp2.1\FShopV2.Service.Customers.AssemblyInfo.cs
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\bin\Debug\netcoreapp2.1\FShopV2.Service.Customers.deps.json
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\bin\Debug\netcoreapp2.1\FShopV2.Service.Customers.runtimeconfig.json
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\bin\Debug\netcoreapp2.1\FShopV2.Service.Customers.runtimeconfig.dev.json
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\bin\Debug\netcoreapp2.1\FShopV2.Service.Customers.dll
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\bin\Debug\netcoreapp2.1\FShopV2.Service.Customers.pdb
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\bin\Debug\netcoreapp2.1\FShopV2.Base.dll
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\bin\Debug\netcoreapp2.1\FShopV2.Base.pdb
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\obj\Debug\netcoreapp2.1\FShopV2.Service.Customers.RazorTargetAssemblyInfo.cache
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\obj\Debug\netcoreapp2.1\FShopV2.Service.Customers.csproj.CopyComplete
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\obj\Debug\netcoreapp2.1\FShopV2.Service.Customers.dll
+D:\LATIHAN\FShopV2\FShopV2.Service.Customers\FShopV2.Service.Customers\obj\Debug\netcoreapp2.1\FShopV2.Service.Customers.pdb

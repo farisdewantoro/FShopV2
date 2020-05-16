@@ -25,6 +25,7 @@ namespace FShopV2.Base.MongoDB
 
         public async Task<IEnumerable<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate)
             => await Collection.Find(predicate).ToListAsync();
+        
 
         //public async Task<PagedResult<TEntity>> BrowseAsync<TQuery>(Expression<Func<TEntity, bool>> predicate,
         //        TQuery query) where TQuery : PagedQueryBase

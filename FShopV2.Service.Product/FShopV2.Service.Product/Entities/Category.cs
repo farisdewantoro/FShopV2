@@ -9,6 +9,7 @@ namespace FShopV2.Service.Product.Entities
 {
     public class Category: BaseEntity
     {
+
         [Required]
         [MinLength(3)]
         [MaxLength(100)]
@@ -21,8 +22,9 @@ namespace FShopV2.Service.Product.Entities
         {
 
         }
-        public Category(string name, string description)
+        public Category(Guid id,string name, string description)
         {
+            Id = id;
             Name = name;
             Description = description;
         }

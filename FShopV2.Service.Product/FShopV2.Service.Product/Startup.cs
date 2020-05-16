@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
+using FShopV2.Base;
 using FShopV2.Base.MongoDB;
 using FShopV2.Base.Mvc;
 using Microsoft.AspNetCore.Builder;
@@ -13,6 +14,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Autofac.Extensions.DependencyInjection;
+using FShopV2.Base.Dispatchers;
+using FShopV2.Service.Product.Entities;
+using FShopV2.Base.RabbitMQ;
 
 namespace FShopV2.Service.Product
 {
@@ -31,8 +35,15 @@ namespace FShopV2.Service.Product
         {
             
             services.AddCustomMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddInitializers(typeof(IMongoDbInitializer));
             var builder = new ContainerBuilder();
+            builder.RegisterAssemblyTypes(typeof(Startup).Assembly)
+              .AsImplementedInterfaces();
+            builder.Populate(services);
+            builder.AddDispatchers();
             builder.AddMongoDb();
+            builder.AddRabbitMq();
+            builder.AddMongoRepository<Category>("Categories");
             Container = builder.Build();
             return new AutofacServiceProvider(Container);
 

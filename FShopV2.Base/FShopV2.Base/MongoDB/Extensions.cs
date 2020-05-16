@@ -17,7 +17,7 @@ namespace FShopV2.Base.MongoDB
             builder.Register(context =>
             {
                 var configuration = context.Resolve<IConfiguration>();
-                var options = configuration.GetOptions<MongoDbOptions>("mongoDB");
+                var options = configuration.GetOptions<MongoDbOptions>("mongo");
                 return options;
             }).SingleInstance();
 
