@@ -2,7 +2,7 @@
 using FShopV2.Base.Mvc;
 using FShopV2.Base.Types;
 using FShopV2.Service.Order.Dto;
-using FShopV2.Service.Order.Messages.Commands;
+using FShopV2.Service.Order.Entities;
 using FShopV2.Service.Order.Queries;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -25,7 +25,7 @@ namespace FShopV2.Service.Order.Controllers
                    => Collection(await QueryAsync(query));
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<CustomerDto>> Get([FromRoute] GetCustomer query)
+        public async Task<ActionResult<Customer>> Get([FromRoute] GetCustomer query)
             => Single(await QueryAsync(query));
 
     }

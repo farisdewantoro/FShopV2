@@ -10,7 +10,7 @@ namespace FShopV2.Service.Customers.Services
     public interface IOrderService
     {
         [AllowAnyStatusCode]
-        [Get("customer/{id}")]
+        [Get("order/customer/{id}")]
         Task<CustomerDto> GetAsync([Path] Guid id);
     }
 }

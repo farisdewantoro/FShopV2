@@ -17,6 +17,7 @@ using Microsoft.Extensions.DependencyInjection;
 using FShopV2.Service.Api.Services;
 using FShopV2.Base.Utility;
 using FShopV2.Base.Jaeger;
+using FShopV2.Base.Consul;
 
 namespace FShopV2.Service.Api
 {
@@ -35,7 +36,7 @@ namespace FShopV2.Service.Api
         {
             services.AddCustomMvc();
             //services.AddSwaggerDocs();
-            //services.AddConsul();
+            services.AddConsul();
             services.AddJwt();
             services.AddJaeger();
             services.AddOpenTracing();
@@ -52,7 +53,7 @@ namespace FShopV2.Service.Api
             });
             services.RegisterServiceForwarder<ICustomerService>(CodeConstant.ServicesName.CUSTOMER_SERVICE);
             services.RegisterServiceForwarder<IOrderService>(CodeConstant.ServicesName.ORDER_SERVICE);
-
+            services.RegisterServiceForwarder<IProductService>(CodeConstant.ServicesName.PRODUCT_SERVICE);
             var builder = new ContainerBuilder();
             builder.RegisterAssemblyTypes(Assembly.GetEntryAssembly())
                     .AsImplementedInterfaces();
@@ -67,7 +68,7 @@ namespace FShopV2.Service.Api
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env,
-            IApplicationLifetime applicationLifetime, 
+            IApplicationLifetime applicationLifetime, IConsulClient client,
             IStartupInitializer startupInitializer)
         {
             if (env.IsDevelopment() || env.EnvironmentName == "local")
@@ -85,12 +86,12 @@ namespace FShopV2.Service.Api
             app.UseMvc();
             app.UseRabbitMq();
 
-            //var consulServiceId = app.UseConsul();
-            //applicationLifetime.ApplicationStopped.Register(() =>
-            //{
-            //    client.Agent.ServiceDeregister(consulServiceId);
-            //    Container.Dispose();
-            //});
+            var consulServiceId = app.UseConsul();
+            applicationLifetime.ApplicationStopped.Register(() =>
+            {
+                client.Agent.ServiceDeregister(consulServiceId);
+                Container.Dispose();
+            });
 
             startupInitializer.InitializeAsync();
         }

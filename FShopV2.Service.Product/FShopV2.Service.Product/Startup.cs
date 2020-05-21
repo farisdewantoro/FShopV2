@@ -17,6 +17,10 @@ using Autofac.Extensions.DependencyInjection;
 using FShopV2.Base.Dispatchers;
 using FShopV2.Service.Product.Entities;
 using FShopV2.Base.RabbitMQ;
+using FShopV2.Base.MessageModels.Products;
+using Consul;
+using FShopV2.Base.Jaeger;
+using FShopV2.Base.Consul;
 
 namespace FShopV2.Service.Product
 {
@@ -36,6 +40,9 @@ namespace FShopV2.Service.Product
             
             services.AddCustomMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddInitializers(typeof(IMongoDbInitializer));
+            services.AddConsul();
+            services.AddJaeger();
+            services.AddOpenTracing();
             var builder = new ContainerBuilder();
             builder.RegisterAssemblyTypes(typeof(Startup).Assembly)
               .AsImplementedInterfaces();
@@ -50,7 +57,8 @@ namespace FShopV2.Service.Product
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IStartupInitializer initializer,
+             IApplicationLifetime applicationLifetime, IConsulClient client)
         {
             if (env.IsDevelopment())
             {
@@ -58,6 +66,15 @@ namespace FShopV2.Service.Product
             }
 
             app.UseMvc();
+            initializer.InitializeAsync();
+            app.UseRabbitMq()
+                .SubscribeCommand<CreateCategory>();
+            var consulServiceId = app.UseConsul();
+            applicationLifetime.ApplicationStopped.Register(() =>
+            {
+                client.Agent.ServiceDeregister(consulServiceId);
+                Container.Dispose();
+            });
         }
     }
 }

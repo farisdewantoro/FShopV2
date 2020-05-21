@@ -10,6 +10,8 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=admin
     ports:
       - '27017:27017'
+    networks:
+      - FShopV2
   mongo-express:
     container_name: mongo-express
     image: mongo-express
@@ -23,3 +25,16 @@ services:
       - ME_CONFIG_BASICAUTH_PASSWORD=admin
     ports:
       - '8081:8081'
+    networks:
+      - FShopV2
+  consul:
+    image: consul
+    container_name: consul
+    ports:
+      - 8500:8500
+    networks:
+      - FShopV2 
+      
+networks:
+  FShopV2:
+    name: FShopV2-network

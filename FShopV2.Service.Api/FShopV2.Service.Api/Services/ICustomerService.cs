@@ -12,7 +12,7 @@ namespace FShopV2.Service.Api.Services
     public interface ICustomerService
     {
         [AllowAnyStatusCode]
-        [Get("customers")]
+        [Get("customer/getall")]
         Task<PagedResult<CustomerDto>> BrowseAsync([Query] BrowseCustomers query);
     }
 }

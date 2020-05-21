@@ -1,14 +1,14 @@
 ﻿using FShopV2.Base.Handlers;
+using FShopV2.Base.MessageModels.Customers;
 using FShopV2.Base.MongoDB;
 using FShopV2.Base.RabbitMQ;
 using FShopV2.Service.Order.Entities;
-using FShopV2.Service.Order.Messages.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FShopV2.Service.Customers.Handlers.Order
+namespace FShopV2.Service.Order.Handlers.Customers
 {
     public class CustomerCreatedEvent:IEventHandler<CustomerCreated>
     {

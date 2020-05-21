@@ -2,7 +2,6 @@
 using FShopV2.Base.Mvc;
 using FShopV2.Base.Types;
 using FShopV2.Service.Customers.Dto;
-using FShopV2.Service.Customers.Messages.Commands;
 using FShopV2.Service.Customers.Queries;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -20,10 +19,15 @@ namespace FShopV2.Service.Customers.Controllers
         {
         }
         [HttpGet("getall")]
-        public async Task<ActionResult<PagedResult<CustomerDto>>> GetAll()
+        public async Task<ActionResult<PagedResult<CustomerDto>>> GetAll([FromQuery] BrowseCustomers query)
         {
-            BrowseCustomers query = new BrowseCustomers();
+            //BrowseCustomers query = new BrowseCustomers();
             
+            return Collection(await QueryAsync(query));
+        }
+        [HttpGet]
+        public async Task<ActionResult<PagedResult<CustomerDto>>> Browse([FromQuery] BrowseCustomers query)
+        {
             return Collection(await QueryAsync(query));
         }
 

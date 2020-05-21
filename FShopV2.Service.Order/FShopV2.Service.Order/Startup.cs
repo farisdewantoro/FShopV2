@@ -16,10 +16,14 @@ using Microsoft.Extensions.Options;
 using Autofac.Extensions.DependencyInjection;
 using FShopV2.Base.Dispatchers;
 using FShopV2.Base.RabbitMQ;
-using FShopV2.Service.Order.Messages.Events;
 using FShopV2.Service.Order.Entities;
 using FShopV2.Base.Jaeger;
 using FShopV2.Base.Utility;
+using FShopV2.Base.MessageModels.Customers;
+using FShopV2.Base.MessageModels.Orders;
+using FShopV2.Base.MessageModels.Products;
+using FShopV2.Base.Consul;
+using Consul;
 
 namespace FShopV2.Service.Order
 {
@@ -39,6 +43,7 @@ namespace FShopV2.Service.Order
         {
             services.AddCustomMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddInitializers(typeof(IMongoDbInitializer));
+            services.AddConsul();
             services.AddJaeger();
             services.AddOpenTracing();
             var builder = new ContainerBuilder();
@@ -49,12 +54,15 @@ namespace FShopV2.Service.Order
             builder.AddMongoDb();
             builder.AddRabbitMq();
             builder.AddMongoRepository<Customer>("Customers");
+            builder.AddMongoRepository<Entities.Order>("Orders");
+            builder.AddMongoRepository<Category>("Categories");
             Container = builder.Build();
             return new AutofacServiceProvider(Container);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IStartupInitializer initializer)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IStartupInitializer initializer,
+             IApplicationLifetime applicationLifetime, IConsulClient client)
         {
             if (env.IsDevelopment())
             {
@@ -62,7 +70,15 @@ namespace FShopV2.Service.Order
             }
             initializer.InitializeAsync();
             app.UseRabbitMq()
-              .SubscribeEvent<CustomerCreated>(@namespace:CodeConstant.ServicesName.CUSTOMER_SERVICE);
+              .SubscribeEvent<CustomerCreated>()
+              .SubscribeCommand<CreateOrder>()
+              .SubscribeEvent<CategoryCreated>();
+            var consulServiceId = app.UseConsul();
+            applicationLifetime.ApplicationStopped.Register(() =>
+            {
+                client.Agent.ServiceDeregister(consulServiceId);
+                Container.Dispose();
+            });
 
             app.UseMvc();
         }

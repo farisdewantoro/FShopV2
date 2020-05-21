@@ -13,7 +13,7 @@ using OpenTracing;
 
 namespace FShopV2.Service.Api.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     [JwtAuth]
     public abstract class BaseController : ControllerBase

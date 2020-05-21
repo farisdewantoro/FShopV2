@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Net.Http;
+using FShopV2.Base.Consul;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -17,9 +18,9 @@ namespace FShopV2.Base.RestEase
             var options = ConfigureOptions(services);
             switch (options.LoadBalancer?.ToLowerInvariant())
             {
-                //case "consul":
-                //    ConfigureConsulClient(services, clientName, serviceName);
-                //    break;
+                case "consul":
+                    ConfigureConsulClient(services, clientName, serviceName);
+                    break;
                 //case "fabio":
                 //    ConfigureFabioClient(services, clientName, serviceName);
                 //    break;
@@ -44,14 +45,14 @@ namespace FShopV2.Base.RestEase
             return configuration.GetOptions<RestEaseOptions>("restEase");
         }
 
-        //private static void ConfigureConsulClient(IServiceCollection services, string clientName,
-        //    string serviceName)
-        //{
-        //    services.AddHttpClient(clientName)
-        //        .AddHttpMessageHandler(c =>
-        //            new ConsulServiceDiscoveryMessageHandler(c.GetService<IConsulServicesRegistry>(),
-        //                c.GetService<IOptions<ConsulOptions>>(), serviceName, overrideRequestUri: true));
-        //}
+        private static void ConfigureConsulClient(IServiceCollection services, string clientName,
+            string serviceName)
+        {
+            services.AddHttpClient(clientName)
+                .AddHttpMessageHandler(c =>
+                    new ConsulServiceDiscoveryMessageHandler(c.GetService<IConsulServicesRegistry>(),
+                        c.GetService<IOptions<ConsulOptions>>(), serviceName, overrideRequestUri: true));
+        }
 
         //private static void ConfigureFabioClient(IServiceCollection services, string clientName,
         //    string serviceName)

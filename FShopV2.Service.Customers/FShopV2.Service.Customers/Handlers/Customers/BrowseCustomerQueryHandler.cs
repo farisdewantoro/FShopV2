@@ -15,22 +15,16 @@ namespace FShopV2.Service.Customers.Handlers.Customers
     public class BrowseCustomerQueryHandler : IQueryHandler<BrowseCustomers, PagedResult<CustomerDto>>
     {
         private readonly IMongoRepository<Customer> mongoRepository;
-        private readonly IOrderService orderService;
 
-        public BrowseCustomerQueryHandler(IMongoRepository<Customer> mongoRepository,IOrderService orderService)
+        public BrowseCustomerQueryHandler(IMongoRepository<Customer> mongoRepository)
         {
             this.mongoRepository = mongoRepository;
-            this.orderService = orderService;
         }
         public async Task<PagedResult<CustomerDto>> HandleAsync(BrowseCustomers query)
         {
             var pagedResult = await mongoRepository.BrowseAsync(_=>true,query);
             var customers = pagedResult.Items.Select(c => new CustomerDto(c.Id,c.FullName,c.Email,c.Phone,c.Address));
-            foreach (var item in customers)
-            {
-
-                var orderCustomer = await orderService.GetAsync(item.Id);
-            }
+          
             return PagedResult<CustomerDto>.From(pagedResult, customers);
         }
     }

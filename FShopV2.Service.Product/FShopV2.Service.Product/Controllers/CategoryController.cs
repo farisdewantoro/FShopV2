@@ -1,7 +1,7 @@
 ﻿using FShopV2.Base.Dispatchers;
 using FShopV2.Base.MongoDB;
+using FShopV2.Service.Product.Dto;
 using FShopV2.Service.Product.Entities;
-using FShopV2.Service.Product.Messages.Commands;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -23,14 +23,10 @@ namespace FShopV2.Service.Product.Controllers
             this.mongoRepository = mongoRepository;
         }
         [HttpGet]
-        public async Task<IEnumerable<Category>> Get()
-            => await this.mongoRepository.FindAsync(x => true);
-        [HttpPost]
-        public async Task<ActionResult> Post([FromBody] CreateCategory command)
+        public async Task<IEnumerable<CategoryDto>> GetAll()
         {
-            await _dispatcher.SendAsync(command);
-
-            return Accepted();
+          var result =  await this.mongoRepository.FindAsync(x => true);
+          return result.Select(x => new CategoryDto(x.Name,x.Description));
         }
     }
 }

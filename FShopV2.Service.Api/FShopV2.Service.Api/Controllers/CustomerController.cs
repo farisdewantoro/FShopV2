@@ -1,18 +1,17 @@
 ﻿using FShopV2.Service.Api.Services;
 using FShopV2.Base.RabbitMQ;
-using FShopV2.Service.Api.Messages.Commands;
 //using FShopV2.Service.Api.Queries;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 using FShopV2.Base.Mvc;
 using FShopV2.Service.Api.Framework;
-using FShopV2.Service.Api.Messages.Commands.Customers;
 using OpenTracing;
 using FShopV2.Base;
 using FShopV2.Base.Utility;
 using Microsoft.AspNetCore.Authorization;
 using FShopV2.Service.Api.Queries;
+using FShopV2.Base.MessageModels.Customers;
 
 namespace FShopV2.Service.Api.Controllers
 {

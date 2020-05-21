@@ -9,5 +9,11 @@ namespace FShopV2.Service.Product.Dto
     {
         public string Name { get; set; }
         public string Description { get; set; }
+
+        public CategoryDto(string name, string description)
+        {
+            Name = name;
+            Description = description;
+        }
     }
 }

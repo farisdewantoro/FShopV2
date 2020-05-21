@@ -1,13 +1,15 @@
 ﻿using FShopV2.Base.Messages;
+using FShopV2.Base.Types;
+using FShopV2.Base.Utility;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace FShopV2.Service.Customers.Messages.Events
+namespace FShopV2.Base.MessageModels.Customers
 {
-    public class CreateCustomerRejected : IRejectedEvent
+    [MessageNamespace(CodeConstant.ServicesName.CUSTOMER_SERVICE)]
+    public class CreateCustomerRejected : IRejectedEvent, IIdentifiable
     {
         public Guid Id { get; }
         public string Reason { get; }

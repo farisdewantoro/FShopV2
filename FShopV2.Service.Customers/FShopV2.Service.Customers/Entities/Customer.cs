@@ -1,5 +1,4 @@
 ﻿using FShopV2.Base.Types;
-using FShopV2.Service.Customers.Messages.Commands;
 using System;
 using System.Collections.Generic;
 using System.Linq;

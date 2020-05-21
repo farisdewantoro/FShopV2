@@ -11,6 +11,7 @@ namespace FShopV2.Base.Utility
             public const string BASE_APP = "FShopV2.Service";
             public const string CUSTOMER_SERVICE = BASE_APP+".Customers";
             public const string ORDER_SERVICE = BASE_APP + ".Order";
+            public const string PRODUCT_SERVICE = BASE_APP + ".Product";
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using FShopV2.Base.Handlers;
+using FShopV2.Base.MessageModels.Orders;
 using FShopV2.Base.MongoDB;
 using FShopV2.Base.RabbitMQ;
-using FShopV2.Service.Order.Messages.Commands;
 using System;
 using System.Collections.Generic;
 using System.Linq;

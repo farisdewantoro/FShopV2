@@ -2836,6 +2836,22 @@
           "lib/netstandard2.0/OpenTracing.dll": {}
         }
       },
+      "OpenTracing.Contrib.NetCore/0.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Hosting.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0",
+          "OpenTracing": "0.12.0"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/OpenTracing.Contrib.NetCore.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/OpenTracing.Contrib.NetCore.dll": {}
+        }
+      },
       "Polly/7.1.0": {
         "type": "package",
         "compile": {
@@ -8115,6 +8131,20 @@
         "lib/netstandard2.0/OpenTracing.xml",
         "opentracing.0.12.0.nupkg.sha512",
         "opentracing.nuspec"
+      ]
+    },
+    "OpenTracing.Contrib.NetCore/0.5.0": {
+      "sha512": "rwOr4Yd0+Vci+vOI/B4bygM0ELj+Id2Xyso3FTlcyBxDcLrCR43ZpH5dxfCAVc/JXoyLt8vfo4xGjJl1S5hq4Q==",
+      "type": "package",
+      "path": "opentracing.contrib.netcore/0.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp2.0/OpenTracing.Contrib.NetCore.dll",
+        "lib/netcoreapp2.0/OpenTracing.Contrib.NetCore.pdb",
+        "lib/netcoreapp2.0/OpenTracing.Contrib.NetCore.xml",
+        "opentracing.contrib.netcore.0.5.0.nupkg.sha512",
+        "opentracing.contrib.netcore.nuspec"
       ]
     },
     "Polly/7.1.0": {
@@ -13647,6 +13677,7 @@
       "Microsoft.NETCore.App >= 2.1.0",
       "MongoDB.Driver >= 2.10.3",
       "Newtonsoft.Json >= 12.0.3",
+      "OpenTracing.Contrib.NetCore >= 0.5.0",
       "Polly >= 7.1.0",
       "RawRabbit >= 2.0.0-rc5",
       "RawRabbit.DependencyInjection.Autofac >= 2.0.0-rc5",
@@ -13744,6 +13775,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
+          },
+          "OpenTracing.Contrib.NetCore": {
+            "target": "Package",
+            "version": "[0.5.0, )"
           },
           "Polly": {
             "target": "Package",

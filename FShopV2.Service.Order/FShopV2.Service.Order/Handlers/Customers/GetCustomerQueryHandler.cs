@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace FShopV2.Service.Order.Handlers.Customers
 {
-    public class GetCustomerQueryHandler:IQueryHandler<GetCustomer, CustomerDto>
+    public class GetCustomerQueryHandler:IQueryHandler<GetCustomer,Customer>
     {
         private readonly IMongoRepository<Customer> mongoRepository;
 
@@ -19,13 +19,7 @@ namespace FShopV2.Service.Order.Handlers.Customers
             this.mongoRepository = mongoRepository;
         }
 
-        public async Task<CustomerDto> HandleAsync(GetCustomer query)
-        {
-            var customer = await mongoRepository.GetAsync(query.Id);
-
-            return customer == null ? null : new CustomerDto(customer.Id,customer.FullName,customer.Email,customer.Phone,customer.Address);
-
-            
-        }
+        public async Task<Customer> HandleAsync(GetCustomer query)
+            => await mongoRepository.GetAsync(query.Id);
     }
 }
