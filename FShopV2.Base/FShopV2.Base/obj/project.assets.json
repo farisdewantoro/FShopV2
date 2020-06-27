@@ -13693,23 +13693,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\faris.dewantoro.XTR\\.nuget\\packages\\": {},
+    "C:\\Users\\m\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LATIHAN\\FShopV2\\FShopV2.Base\\FShopV2.Base\\FShopV2.Base.csproj",
+      "projectUniqueName": "D:\\C-SHARP\\FShopV2\\FShopV2.Base\\FShopV2.Base\\FShopV2.Base.csproj",
       "projectName": "FShopV2.Base",
-      "projectPath": "D:\\LATIHAN\\FShopV2\\FShopV2.Base\\FShopV2.Base\\FShopV2.Base.csproj",
-      "packagesPath": "C:\\Users\\faris.dewantoro.XTR\\.nuget\\packages\\",
-      "outputPath": "D:\\LATIHAN\\FShopV2\\FShopV2.Base\\FShopV2.Base\\obj\\",
+      "projectPath": "D:\\C-SHARP\\FShopV2\\FShopV2.Base\\FShopV2.Base\\FShopV2.Base.csproj",
+      "packagesPath": "C:\\Users\\m\\.nuget\\packages\\",
+      "outputPath": "D:\\C-SHARP\\FShopV2\\FShopV2.Base\\FShopV2.Base\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\faris.dewantoro.XTR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\m\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13717,7 +13717,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://nuget.xtremax.com/nuget/": {},
+        "http://nuget.xtremax.com/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

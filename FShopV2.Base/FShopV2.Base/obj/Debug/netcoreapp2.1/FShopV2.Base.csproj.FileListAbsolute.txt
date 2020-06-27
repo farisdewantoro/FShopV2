@@ -1,12 +1,3 @@
-D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\bin\Debug\netcoreapp2.1\FShopV2.Base.deps.json
-D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\bin\Debug\netcoreapp2.1\FShopV2.Base.dll
-D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\bin\Debug\netcoreapp2.1\FShopV2.Base.pdb
-D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\obj\Debug\netcoreapp2.1\FShopV2.Base.csproj.CoreCompileInputs.cache
-D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\obj\Debug\netcoreapp2.1\FShopV2.Base.AssemblyInfoInputs.cache
-D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\obj\Debug\netcoreapp2.1\FShopV2.Base.AssemblyInfo.cs
-D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\obj\Debug\netcoreapp2.1\FShopV2.Base.dll
-D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\obj\Debug\netcoreapp2.1\FShopV2.Base.pdb
-D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\obj\Debug\netcoreapp2.1\FShopV2.Base.csprojAssemblyReference.cache
 D:\LATIHAN\FShopV2\FShopV2.Base\FShopV2.Base\bin\Debug\netcoreapp2.1\FShopV2.Base.deps.json
 D:\LATIHAN\FShopV2\FShopV2.Base\FShopV2.Base\bin\Debug\netcoreapp2.1\FShopV2.Base.dll
 D:\LATIHAN\FShopV2\FShopV2.Base\FShopV2.Base\bin\Debug\netcoreapp2.1\FShopV2.Base.pdb
@@ -18,3 +9,14 @@ D:\LATIHAN\FShopV2\FShopV2.Base\FShopV2.Base\obj\Debug\netcoreapp2.1\FShopV2.Bas
 D:\LATIHAN\FShopV2\FShopV2.Base\FShopV2.Base\bin\Debug\netcoreapp2.1\FShopV2.Base.runtimeconfig.json
 D:\LATIHAN\FShopV2\FShopV2.Base\FShopV2.Base\bin\Debug\netcoreapp2.1\FShopV2.Base.runtimeconfig.dev.json
 D:\LATIHAN\FShopV2\FShopV2.Base\FShopV2.Base\obj\Debug\netcoreapp2.1\FShopV2.Base.csprojAssemblyReference.cache
+D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\bin\Debug\netcoreapp2.1\FShopV2.Base.deps.json
+D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\bin\Debug\netcoreapp2.1\FShopV2.Base.runtimeconfig.json
+D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\bin\Debug\netcoreapp2.1\FShopV2.Base.runtimeconfig.dev.json
+D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\bin\Debug\netcoreapp2.1\FShopV2.Base.dll
+D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\bin\Debug\netcoreapp2.1\FShopV2.Base.pdb
+D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\obj\Debug\netcoreapp2.1\FShopV2.Base.csproj.CoreCompileInputs.cache
+D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\obj\Debug\netcoreapp2.1\FShopV2.Base.AssemblyInfoInputs.cache
+D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\obj\Debug\netcoreapp2.1\FShopV2.Base.AssemblyInfo.cs
+D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\obj\Debug\netcoreapp2.1\FShopV2.Base.dll
+D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\obj\Debug\netcoreapp2.1\FShopV2.Base.pdb
+D:\C-SHARP\FShopV2\FShopV2.Base\FShopV2.Base\obj\Debug\netcoreapp2.1\FShopV2.Base.csprojAssemblyReference.cache

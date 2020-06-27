@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FShopV2.Service.Order", "..
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FShopV2.Service.Api", "..\FShopV2.Service.Api\FShopV2.Service.Api\FShopV2.Service.Api.csproj", "{251DB260-F9B4-442C-A21D-6F563F27377E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FShopV2.Base.Test", "..\FShopV2.Base.Test\FShopV2.Base.Test\FShopV2.Base.Test.csproj", "{147DEAB8-E6E6-4F8D-96EF-0BD0A2ED7876}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FShopV2.Service.Product.IntergationTest", "..\FShopV2.Service.Product\FShopV2.Service.Product.IntergationTest\FShopV2.Service.Product.IntergationTest\FShopV2.Service.Product.IntergationTest.csproj", "{D98C8E7C-94C1-4F68-BF12-E4A627DB619E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{251DB260-F9B4-442C-A21D-6F563F27377E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{251DB260-F9B4-442C-A21D-6F563F27377E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{251DB260-F9B4-442C-A21D-6F563F27377E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{147DEAB8-E6E6-4F8D-96EF-0BD0A2ED7876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{147DEAB8-E6E6-4F8D-96EF-0BD0A2ED7876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{147DEAB8-E6E6-4F8D-96EF-0BD0A2ED7876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{147DEAB8-E6E6-4F8D-96EF-0BD0A2ED7876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D98C8E7C-94C1-4F68-BF12-E4A627DB619E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D98C8E7C-94C1-4F68-BF12-E4A627DB619E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D98C8E7C-94C1-4F68-BF12-E4A627DB619E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D98C8E7C-94C1-4F68-BF12-E4A627DB619E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
